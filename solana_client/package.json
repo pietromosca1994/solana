@@ -1,0 +1,15 @@
+{
+  "name": "solana_client",
+  "version": "1.0.0",
+  "description": "typescript solana client",
+  "main": "index.js",
+  "author": "Pietro Mosca",
+  "license": "MIT",
+  "scripts": {
+    "connection": "node connection.js",
+    "transaction": "node transaction.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
