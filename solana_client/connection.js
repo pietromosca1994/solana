@@ -12,7 +12,10 @@ async function main() {
         console.log(blockTime);
         // 1630747045
 
-        let block = await connection.getBlock(slot);
+        const rawConfig={
+            maxSupportedTransactionVersion: 0
+        }
+        let block = await connection.getBlock(slot, rawConfig);
         console.log(block);
 
         /*

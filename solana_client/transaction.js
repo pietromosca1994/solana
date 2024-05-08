@@ -11,9 +11,9 @@ async function main() {
     console.log("Public key ", payer.publicKey.toString());
 
     // Airdrop SOL for paying transactions
-    // let connection = new web3.Connection(web3.clusterApiUrl("devnet"), "confirmed");
-    const rpc_url=`https://polished-smart-slug.solana-devnet.quiknode.pro/${process.env.QUICKNODE_KEY}`;
-    let connection = new web3.Connection(rpc_url)
+    let connection = new web3.Connection(web3.clusterApiUrl("devnet"), "confirmed");
+    // const rpc_url=`https://polished-smart-slug.solana-devnet.quiknode.pro/${process.env.QUICKNODE_KEY}`;
+    // let connection = new web3.Connection(rpc_url, "confirmed")
 
     let airdropSignature = await connection.requestAirdrop(
     payer.publicKey,
@@ -35,7 +35,7 @@ async function main() {
     web3.SystemProgram.transfer({
         fromPubkey: payer.publicKey,
         toPubkey: toAccount.publicKey,
-        lamports: 1000,
+        lamports: 100,
     }),
     );
     

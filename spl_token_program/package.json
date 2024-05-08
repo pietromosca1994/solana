@@ -1,0 +1,14 @@
+{
+  "name": "spl_token_program",
+  "version": "1.0.0",
+  "description": "typescript solana client",
+  "main": "index.js",
+  "author": "Pietro Mosca",
+  "license": "MIT",
+  "scripts": {
+    "mint": "node mint.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
